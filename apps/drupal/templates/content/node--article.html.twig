@@ -76,7 +76,6 @@
 ] | sort | join(' ') | trim %}
 
 {% embed '@organisms/article/_article.twig' %}
-
   {% block article_header %}
     {{ title_prefix }}
     {% if not page %}
