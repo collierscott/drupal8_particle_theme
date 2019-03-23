@@ -50,7 +50,7 @@ const dev = {
   devServer: {
     host: '0.0.0.0',
     port: '8080',
-    allowedHosts: ['.docksal', '.vm', '0.0.0.0', 'localhost'],
+    allowedHosts: ['.docksal', '.vm', '0.0.0.0', 'localhost', 'drupaldev.test', 'drupalstaging.test', 'drupalprod.test'],
     contentBase: PATH_DIST, // dev server starts from this folder.
     public: PARTICLE_PL_HOST, // local host name for devServer
     watchContentBase: true, // Refresh devServer when dist/ changes (Pattern Lab)
