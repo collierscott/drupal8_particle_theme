@@ -60,8 +60,10 @@
       {{ page.header_branding }}
       {{ page.secondary_menu }}
     {% endblock jumbotron_branding %}
+    {% block header_cta %}
+      {{ page.header_cta }}
+    {% endblock header_cta %}
   {% endembed %}
-  {{ dump(page) }}
 </header>
 
   {# Help Region not Included by Default. #}

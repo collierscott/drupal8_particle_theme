@@ -136,7 +136,7 @@ function particle_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       // Add the Bootstrap class to our Input button.
       $form['actions']['submit']['#attributes']['class'] = [
         'btn',
-        'btn-outline-success',
+        'btn-success',
       ];
       break;
 
@@ -149,7 +149,7 @@ function particle_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       // Add the Bootstrap class to our Input button.
       $form['actions']['submit']['#attributes']['class'] = [
         'btn',
-        'btn-outline-success',
+        'btn-success',
       ];
   }
 }
