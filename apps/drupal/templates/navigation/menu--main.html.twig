@@ -26,7 +26,7 @@
 #}
 {{ menus.menu_links(items, attributes, 0) }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, is_submenu) %}
   {% import _self as menus %}
     {% if items %}
 
@@ -35,32 +35,49 @@
       'navbar-nav',
       'mr-auto',
     ] | sort | join(' ') | trim %}
-
     {% if menu_level == 0 %}
-    <ul{{ attributes.addClass(wrapper_classes) }}>
+        <ul{{ attributes.addClass(wrapper_classes) }}>
       {% else %}
-      <ul class="{{ wrapper_classes }}">
-        {% endif %}
+          {% if not is_submenu %}
+            <ul class="{{ wrapper_classes }}">
+          {% endif %}
+      {% endif %}
 
         {% for item in items %}
-
           {# Sync Drupal and Bootstrap's active state classes. #}
           {% set item_classes = [
             item.in_active_trail ? 'active',
           ] %}
 
-          {#  Include our pre-built Nav Items from Particle.
-              See particle/source/_patterns/02-molecules/nav/_nav-item.twig. #}
-          {% include '@molecules/nav/_nav-item.twig' with {
-            nav_item_element: 'li',
-            nav_item_classes: item_classes,
-            nav_item_link: item.url,
-            js_attributes: item.attributes,
-            nav_item_text: item.title,
-          } %}
-
           {% if item.below %}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {% if menu_level == 0 %}
+              {% set item_classes = item_classes|merge(['nav-item', 'dropdown'])| sort | join(' ') | trim %}
+              <li class="{{ item_classes }}">
+                <a class="nav-link dropdown-toggle" href="#" id="{{ item.title }}-dd"
+                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ item.title }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="{{ item.title }}-dd">
+                  {{ menus.menu_links(item.below, attributes, menu_level + 1, true) }}
+              </li>
+            {% else %}
+                {% set item_classes = item_classes|merge(['dropdown-item'])| sort | join(' ') | trim %}
+                <a class="{{ item_classes }}" href="{{ item.url }}">{{ item.title }}</a>
+              {% endif %}
+          {% else %}
+            {% if menu_level == 0 %}
+              {% include '@molecules/nav/_nav-item.twig' with {
+                nav_item_element: 'li',
+                nav_item_classes: item_classes,
+                nav_item_link: item.url,
+                js_attributes: item.attributes,
+                nav_item_text: item.title,
+              } %}
+            {% else %}
+              {% set item_classes = item_classes|merge(['dropdown-item'])| sort | join(' ') | trim %}
+              <a class="{{ item_classes }}" href="{{ item.url }}">{{ item.title }}</a>
+            {% endif %}
+
           {% endif %}
 
         {% endfor %}
