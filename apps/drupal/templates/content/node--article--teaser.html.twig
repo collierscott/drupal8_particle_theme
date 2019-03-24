@@ -76,12 +76,13 @@
   card_title: label,
   card_text: content.body,
   card_image_location: 'top',
-  card_image: file_url(content.field_image['#items'].entity.uri.value),
+  card_image: content.field_image['#items'].entity.uri.value ? file_url(content.field_image['#items'].entity.uri.value),
   button: {
     button_element: 'a',
     button_color: 'secondary',
     button_text: 'Read More »'|t,
     button_link: url,
+    button_other_classes: 'float-right'
   }
 } %}
 
