@@ -4,14 +4,14 @@
  * https://fontawesome.com/how-to-use/with-the-api/setup/getting-started
  */
 
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { library, dom } from '@fortawesome/fontawesome-pro/js/fontawesome';
 // Import specific icons required
 import {
   faUserAstronaut,
   faRocket,
   faSpaceShuttle,
   faUser,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/fontawesome-pro/js/solid';
 
 // Add specific icons required
 library.add(faUserAstronaut, faRocket, faSpaceShuttle, faUser);

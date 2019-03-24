@@ -76,7 +76,6 @@
 ] | sort | join(' ') | trim %}
 
 {% embed '@organisms/article/_article.twig' %}
-
   {% block article_header %}
     {{ title_prefix }}
     {% if not page %}
@@ -98,7 +97,7 @@
       <blockquote class="text-right">
         {{ author_picture }}
         <footer{{ author_attributes.addClass('blockquote-footer') }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {% trans %}Submitted by dummy {{ author_name }} on {{ date }}{% endtrans %}
           {{ metadata }}
         </footer>
       </blockquote>

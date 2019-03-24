@@ -57,9 +57,7 @@ const dev = {
     new RunScriptAfterEmit({
       exec: [
         // prettier-ignore
-        `echo \n🚀 Webpack Drupal ${NODE_ENV} build complete! 
-        Edit apps/drupal/webpack.config.js to replace this line with 
-        'drupal cr all' now. 🚀\n`,
+        `drupal cr all`,
       ],
     }),
   ],

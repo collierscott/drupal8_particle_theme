@@ -31,6 +31,7 @@
     <img data-src="{{ imgSrc }}"{% if class %} class="{{ class }}"{% endif %} alt="A placeholder image">
   {% endif %}
 {% else %}
+  {{ breakpoint() }}
   {# Is `img` an object or string? #}
   {% set imgSrc = img is iterable ? img.src : img %}
   {% set imgAlt = img is iterable ? img.alt : '' %}
