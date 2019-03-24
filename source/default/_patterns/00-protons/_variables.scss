@@ -16,6 +16,32 @@
 // THIS FILE CONTAINS ONLY NON-PRINTING SASS, LIKE VARIABLES, MIXINS, & FUNCTIONS
 //
 
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded:            false;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        true;
+$enable-hover-media-query:  false;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+$headings-margin-bottom: .66em;
+$headings-font-family: inherit;
+$headings-font-weight: 600;
+$headings-line-height: 1.1;
+$headings-color: inherit;
+
+$display1-size: 4.5rem;
+$display2-size: 4rem;
+$display3-size: 3.5rem;
+$display4-size: 3rem;
+
+$header-height: 4.5rem;
+
+//$fa-font-path:   "../webfonts";
+
 // Custom non-printing tools
 @import 'non-printing/colors';
 @import 'non-printing/type';

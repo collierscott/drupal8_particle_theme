@@ -5,13 +5,12 @@
  */
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-// Import specific icons required
 import {
   faUserAstronaut,
   faRocket,
   faSpaceShuttle,
   faUser,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/pro-solid-svg-icons';
 
 // Add specific icons required
 library.add(faUserAstronaut, faRocket, faSpaceShuttle, faUser);
