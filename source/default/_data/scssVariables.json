@@ -1,15 +1,13 @@
 {
   "scssColors": {
-    "primary": "rgb(0, 123, 255)",
+    "primary": "rgb(2, 117, 216)",
     "secondary": "rgb(108, 117, 125)",
-    "success": "rgb(40, 167, 69)",
+    "success": "rgb(92, 184, 92)",
     "info": "rgb(23, 162, 184)",
-    "warning": "rgb(255, 193, 7)",
-    "danger": "rgb(220, 53, 69)",
+    "warning": "rgb(255, 213, 0)",
+    "danger": "rgb(217, 83, 79)",
     "light": "rgb(248, 249, 250)",
-    "dark": "rgb(52, 58, 64)",
-    "blerp": "rgb(255, 192, 203)",
-    "derp": "rgb(0, 128, 0)"
+    "dark": "rgb(52, 58, 64)"
   },
   "scssBreakpoints": {
     "xs": 0,
@@ -24,42 +22,30 @@
     "2": "0.5rem",
     "3": "1rem",
     "4": "1.5rem",
-    "5": "3rem",
-    "6": "3.5rem",
-    "7": "4rem"
+    "5": "3rem"
   },
   "fontFamilies": {
     "$font-family-base": [
+      "Source Sans Pro",
       "-apple-system",
       "BlinkMacSystemFont",
       "Segoe UI",
-      "Roboto",
       "Helvetica Neue",
       "Arial",
-      "Noto Sans",
-      "sans-serif",
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol",
-      "Noto Color Emoji"
+      "sans-serif"
     ],
     "$font-family-monospace": [
-      "SFMono-Regular",
-      "Menlo",
       "Monaco",
       "Consolas",
       "Liberation Mono",
       "Courier New",
       "monospace"
     ],
-    "$headings-font-family": [
-      "Oswald",
-      "sans-serif"
-    ]
+    "$headings-font-family": "inherit"
   },
   "fontSizes": {
-    "base": "1rem",
-    "lg": "1.25rem",
+    "base": "0.9375rem",
+    "lg": "1.125rem",
     "sm": "0.875rem"
   },
   "fontWeights": {
