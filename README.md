@@ -1,3 +1,14 @@
+# General Use
+Clone ito themes directory.
+```
+$ git clone https://github.com/collierscott/drupal8_particle_theme.git .
+$ cd particle
+$ npm install
+$ npm run setup 
+$ npm build:drupal
+```
+Don't forget to clear the Drupal cache!
+
 # Particle: A design system integrating to Pattern Lab and a Drupal 8 theme
 
 [![GitHub (pre-)release](https://img.shields.io/github/release/phase2/particle/all.svg)](https://github.com/phase2/particle/releases) [![Build Status](https://travis-ci.org/phase2/particle.svg?branch=master)](https://travis-ci.org/phase2/particle) [![Greenkeeper badge](https://badges.greenkeeper.io/phase2/particle.svg)](https://greenkeeper.io/)
